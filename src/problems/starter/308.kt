@@ -1,4 +1,4 @@
-package problems.legend
+package problems.starter
 
 import java.util.Scanner
 
