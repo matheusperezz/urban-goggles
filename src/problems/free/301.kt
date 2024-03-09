@@ -1,4 +1,4 @@
-package problemas
+package problems.free
 
 import java.util.Scanner
 

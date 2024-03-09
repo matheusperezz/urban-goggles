@@ -1,4 +1,4 @@
-package problemas
+package problems.free
 
 import java.util.Scanner
 
@@ -18,13 +18,13 @@ import java.util.Scanner
  * **/
 
 fun main() {
-    val reader = Scanner(System.`in`)
-    val n = reader.nextInt()
-    val list = mutableListOf<Int>()
+  val reader = Scanner(System.`in`)
+  val n = reader.nextInt()
+  val list = mutableListOf<Int>()
 
-    for (i in 0 until n){
-        list.add(reader.nextInt())
-    }
+  for (i in 0 until n) {
+    list.add(reader.nextInt())
+  }
 
-    println(list.sum())
+  println(list.sum())
 }
