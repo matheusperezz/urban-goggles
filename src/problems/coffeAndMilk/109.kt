@@ -1,6 +1,6 @@
 package problems.coffeAndMilk
 
-import java.util.Scanner
+import java.util.*
 
 fun main() {
   val reader = Scanner(System.`in`)

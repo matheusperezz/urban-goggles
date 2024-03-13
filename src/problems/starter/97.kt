@@ -8,9 +8,9 @@ fun main() {
   val n = reader.nextFloat()
   val fee: Float = when {
     n <= 400F -> 15.0F
-    n in 400.01F..800.00F -> 12.0F
-    n in 800.01F..1200.00F -> 10.0F
-    n in 1200.01F..2000.00F -> 7.0F
+    n <= 800.00F -> 12.0F
+    n <= 1200.00F -> 10.0F
+    n <= 2000.00F -> 7.0F
     else -> 4.0F
   }
 
