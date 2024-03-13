@@ -1,4 +1,4 @@
-package problems.free
+package problems.coffeAndMilk
 
 import java.util.Scanner
 
