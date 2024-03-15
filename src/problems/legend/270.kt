@@ -1,20 +1,11 @@
 package problems.legend
 
-import java.util.*
+// TODO: Teste 5 falhando
+import java.util.Scanner
 import kotlin.math.pow
 import kotlin.math.round
 
-// TODO: Teste 5 falhando
 fun main() {
-  solver()
-}
-
-fun roundUp(number: Double, decimal: Int): Double {
-    val factor = 10.0.pow(decimal)
-    return round(number * factor + 0.5) / factor
-}
-
-fun solver(){
   val reader = Scanner(System.`in`)
   val keyword = mapOf(
     "carro" to "%",
@@ -38,7 +29,9 @@ fun solver(){
   val words = text.split(Regex("\\b"))
   val replacedWords = words.map { word ->
     val trimmedWord = word.trimEnd { it in ".," }
-    keyword[trimmedWord]?.let { it + word.drop(trimmedWord.length) } ?: word
+    keyword.entries.find { "\\b${it.key}\\b".toRegex().containsMatchIn(trimmedWord) }?.let {
+      it.value + word.drop(it.key.length)
+    } ?: word
   }
   val replacedText = replacedWords.joinToString("")
   val finalSize = replacedText.length.toDouble()
@@ -47,4 +40,9 @@ fun solver(){
 
   println(replacedText)
   println("Taxa de compressao:%.2f".format(compressionRate) + "%")
+}
+
+fun roundUp(number: Double, decimal: Int): Double {
+  val factor = 10.0.pow(decimal)
+  return round(number * factor + 0.5) / factor
 }
