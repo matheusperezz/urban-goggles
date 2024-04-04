@@ -31,3 +31,17 @@ int problem331() {
 
   return 0;
 }
+
+int problem264() {
+  double total = 0;
+  int n;
+  cin >> n;
+  for (int i = 0; i < n; i++){
+    int quant; double value;
+    cin >> quant >> value;
+    total += quant * value;
+  }
+
+  printf("%.2f", total);
+  return 0;
+}

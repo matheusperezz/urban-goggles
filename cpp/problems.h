@@ -7,5 +7,6 @@
 
 int minhaFuncao();
 int problem331();
+int problem264();
 
 #endif //CPP_PROBLEMS_H
