@@ -1,20 +1,23 @@
-def calcular_posicoes_possiveis(N, M, sapos):
-    posicoes = [0] * N 
-    
-    for sapo in sapos:
-        posicao_inicial, pulo = sapo
-        posicoes_possiveis = posicao_inicial
-        
-        while posicoes_possiveis <= N:
-            posicoes[posicoes_possiveis - 1] = 1
-            posicoes_possiveis += pulo
-        
-    return posicoes
+n, m = map(int, input().split())
+stones = [0 for _ in range(n)]
+for _ in range(m):
+    position, jump_distance = map(int, input().split())
+    current_pos = position-1
+    stones[current_pos] = 1
 
-N, M = map(int, input().split())
-sapos = [tuple(map(int, input().split())) for _ in range(M)]
+    # Right jumps
+    for i in range(current_pos + jump_distance, n, jump_distance):
+        if i < n:
+            stones[i] = 1
+        else:
+            break
 
-posicoes_possiveis = calcular_posicoes_possiveis(N, M, sapos)
+    # Left jumps
+    for i in range(current_pos - jump_distance, -1, -jump_distance):
+        if i >= 0:
+            stones[i] = 1
+        else:
+            break
 
-for posicao in posicoes_possiveis:
-    print(posicao)
+for s in stones:
+    print(s)
