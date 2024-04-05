@@ -7,7 +7,6 @@ for _ in range(ondas):
         defendeu_vila = False
     clones_naruto -= zetsus   
 
-  
 if defendeu_vila:
   print('Naruto defendeu a Vila')
 else:
