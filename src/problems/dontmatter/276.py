@@ -25,7 +25,7 @@ while True:
         break
     rooms += mapa_hashe[val]
 
-if peoples < rooms:
+if peoples > rooms:
     print('Procure outra pousada.')
 else:
     print('Pode reservar! Esses quartos cabem todos.')
