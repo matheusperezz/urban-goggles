@@ -12,7 +12,7 @@ def contar_movimentos(N, movimentos, buracos):
         if movimento == 1:
             novo_x, novo_y = x + 1, y - 2
         elif movimento == 2:
-            novo_x, novo_y = x + 2, y - 2
+            novo_x, novo_y = x + 2, y - 1
         elif movimento == 3:
             novo_x, novo_y = x + 2, y + 1
         elif movimento == 4:
@@ -33,6 +33,9 @@ def contar_movimentos(N, movimentos, buracos):
                 break
             else:
                 movimentos_feitos += 1
+        else:
+            movimentos_feitos += 1
+            break
 
     return movimentos_feitos
 
