@@ -1,4 +1,5 @@
 j, z, jm, zm = map(int, input().split())
+# Testing some comments
 counter = 0
 while j < z:
     j = int((j * 2) - (j * (jm / 100)))
