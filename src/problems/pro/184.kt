@@ -1,7 +1,7 @@
 package problems.pro
 
 import java.util.Scanner
-// Testing another comment
+
 fun main(){
   val reader = Scanner(System.`in`)
   var matrix = mutableListOf<MutableList<Int>>()
