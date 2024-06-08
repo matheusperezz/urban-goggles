@@ -1,0 +1,5 @@
+phrase = input()
+no_space_phrase = phrase.split(" ")
+sorted_phrase = sorted(no_space_phrase, key=lambda word: (len(word), word))
+final_phrase = " ".join(sorted_phrase)
+print(final_phrase)
