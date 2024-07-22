@@ -4,6 +4,6 @@
 using namespace std;
 
 int main() {
-    printMessage();
+    c_221();
     return 0;
 }
