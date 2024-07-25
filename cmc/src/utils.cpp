@@ -7,11 +7,6 @@
 
 using namespace std;
 
-void printMessage()
-{
-    cout << "This is a message from the utils file!" << endl;
-}
-
 void c_221()
 {
     int N1, N2, N3;
