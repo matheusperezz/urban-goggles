@@ -4,3 +4,4 @@
 Linguagens utilizadas:
     - Python
     - C++
+    - Rust
