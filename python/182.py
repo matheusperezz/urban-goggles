@@ -20,3 +20,5 @@ for v in verifieds:
         print('Nao foi visitado ainda.')
     else:
         print(r)
+
+print('testando algo')
